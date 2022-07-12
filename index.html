@@ -1,10 +1,3 @@
-<!-- CHALLENGE! -->
-<!-- - Haal alle margins uit de overige css classes en vervange ze door utilities -->
-<!-- - Maak utilities for de text (font-weight, font-size etc) -->
-<!-- Bonus: maak van alle kleuren een variable -->
-
-<!-- Veel succes! -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,96 +19,103 @@
     <title>Frontend Mentor | Officelite coming soon site</title>
     <script src="./index.js"></script>
   </head>
-  <body class="container mb-content-xl">
-    <div class="header">
-      <div class="logo mb-content-l">
-        <img
-          class="logo-small"
-          src="./assets/shared/logo.svg"
-          alt="officelite logo"
-        />
-      </div>
-      <div class="intro__text">
-        <h1 class="intro__title heading-bold--l mb-l">
-          A simple solution to complex tasks is coming soon
-        </h1>
-        <p class="intro__subtitle mb-l lineh-l">
-          Say goodbye to inefficient juggling of multiple apps, teams, and
-          projects. Officelite is the new collaboration platform built with an
-          intuitive interface to improve productivity.
-        </p>
-        <button class="btn__introstart brdradius-l">
-          <a href="#">Get Started</a>
-        </button>
-        <!-- Voor text zou ik de classes een beetje groeperen -->
-        <!-- line-height-l bijvoorbeeld .. is mijn inziens een beetje een edgecase -->
-        <!-- Een beetje te specifiek voor een utility -->
-        <!-- Tenzij je heel veel verschillende line-heights hebt oid -->
-        <!-- Ik zou dingen voor text groeperen aan de hand van de style guide -->
-        <!-- Ga eens naar figma? -->
-      </div>
-      <img class="intro__image" src="./assets/home/illustration-charts.svg" />
-      <div class="subscriptions mb-xxxl">
-        <div class="card card--white p-xl">
-          <h2 class="card__title mb-xl">Basic</h2>
-          <h3 class="card__price mb-xs">Free</h3>
-          <p class="card__userbill mb-xxl lineh-l">Up to 5 users for free</p>
-          <ul class="mb-l">
-            <li class="card__information mb-s">Basic document collaboration</li>
-            <li class="card__information mb-s">2 GB storage</li>
-            <li class="card__information mb-s">Great security and support</li>
-          </ul>
-          <button class="btn__try brdradius-l">
-            <a href="#">Try for free</a>
+  <body>
+    <div class="container mb-content-xl">
+      <div class="header">
+        <div class="logo mb-content-l">
+          <img
+            class="logo-small"
+            src="./assets/shared/logo.svg"
+            alt="officelite logo"
+          />
+        </div>
+        <div class="intro__text">
+          <h1 class="intro__title heading-bold--l mb-l">
+            A simple solution to complex tasks is coming soon
+          </h1>
+          <p class="intro__subtitle mb-l lineh-l">
+            Say goodbye to inefficient juggling of multiple apps, teams, and
+            projects. Officelite is the new collaboration platform built with an
+            intuitive interface to improve productivity.
+          </p>
+          <button class="btn__blue brdradius-l btn-size">
+            <a href="#">Get started</a>
           </button>
         </div>
-        <div class="card card--primary-with-bg p-xl">
-          <h2 class="card__title mb-xl">Pro</h2>
-          <h3 class="cardpro__price mb-xs">$9.99</h3>
-          <p class="card__userbill mb-xxl lineh-l">Per user, billed monthly</p>
-          <ul class="mb-l">
-            <li class="card__information mb-s">All essential integrations</li>
-            <li class="card__information mb-s">50 GB storage</li>
-            <li class="card__information mb-s">More control and insights</li>
-          </ul>
-          <button href="#" class="--clr-neutral-blue btnpro__try brdradius-l">
-            <a href="#">Try for free</a>
-          </button>
+        <img class="intro__image" src="./assets/home/illustration-charts.svg" />
+        <div class="subscriptions mb-xxxl">
+          <div class="card card--white p-xl">
+            <h2 class="card__title mb-xl">Basic</h2>
+            <h3 class="card__price mb-xs">Free</h3>
+            <p class="card__users mb-xxl lineh-l">Up to 5 users for free</p>
+            <ul class="mb-l">
+              <li class="card__information mb-s">
+                Basic document collaboration
+              </li>
+              <li class="card__information mb-s">2 GB storage</li>
+              <li class="card__information mb-s">Great security and support</li>
+            </ul>
+            <button class="btn__try brdradius-l btn-size">
+              <a href="#">Try for free</a>
+            </button>
+          </div>
+          <div class="card card--primary-with-bg p-xl">
+            <h2 class="cardpro__title mb-xl">Pro</h2>
+            <h3 class="cardpro__price mb-xs">$9.99</h3>
+            <p class="card__users mb-xxl lineh-l">Per user, billed monthly</p>
+            <ul class="mb-l">
+              <li class="card__information mb-s">All essential integrations</li>
+              <li class="card__information mb-s">50 GB storage</li>
+              <li class="card__information mb-s">More control and insights</li>
+            </ul>
+            <button
+              href="#"
+              class="--clr-neutral-blue btn__blue__try brdradius-l btn-size"
+            >
+              <a href="#">Try for free</a>
+            </button>
+          </div>
+          <div class="card card--white p-xl">
+            <h2 class="card__title mb-xl">Ultimate</h2>
+            <h3 class="card__price mb-xs">$19.99</h3>
+            <p class="card__users mb-xxl lineh-l">Per user, billed monthly</p>
+            <ul class="mb-l">
+              <li class="card__information mb-s">Robust work management</li>
+              <li class="card__information mb-s">100 GB storage</li>
+              <li class="card__information mb-s">VIP support</li>
+            </ul>
+            <button href="#" class="btn__try brdradius-l btn-size">
+              <a href="#">Try for free</a>
+            </button>
+          </div>
         </div>
-        <div class="card card--white p-xl">
-          <h2 class="card__title mb-xl">Ultimate</h2>
-          <h3 class="card__price mb-xs">$19.99</h3>
-          <p class="card__userbill mb-xxl lineh-l">Per user, billed monthly</p>
-          <ul class="mb-l">
-            <li class="card__information mb-s">Robust work management</li>
-            <li class="card__information mb-s">100 GB storage</li>
-            <li class="card__information mb-s">VIP support</li>
-          </ul>
-          <button href="#" class="btn__try brdradius-l">
-            <a href="#">Try for free</a>
+        <footer class="timerdisplay">
+          <p class="timertitle">Coming 13 Oct 2022</p>
+          <div class="timercount">
+            <div class="countdown__days pt-l brdradius-s lineh-l" id="days">
+              <p><span class="mb-s">13</span>days</p>
+            </div>
+            <div class="countdown__hours pt-l brdradius-s lineh-l" id="hours">
+              <p><span class="mb-s">20</span>hours</p>
+            </div>
+            <div
+              class="countdown__minutes pt-l brdradius-s lineh-l"
+              id="minutes"
+            >
+              <p><span class="mb-s">33</span>min</p>
+            </div>
+            <div
+              class="countdown__seconds pt-l brdradius-s lineh-l"
+              id="seconds"
+            >
+              <p><span class="mb-s">44</span>sec</p>
+            </div>
+          </div>
+          <button class="btn__blue brdradius-l btn-size">
+            <a href="#">Get started</a>
           </button>
-        </div>
+        </footer>
       </div>
-      <footer class="timerdisplay">
-        <p class="timertitle">Coming 13 Oct 2022</p>
-        <div class="timercount">
-          <div class="countdown__days pt-l brdradius-s lineh-l" id="days">
-            <p><span class="mb-s">13</span>days</p>
-          </div>
-          <div class="countdown__hours pt-l brdradius-s lineh-l" id="hours">
-            <p><span class="mb-s">20</span>hours</p>
-          </div>
-          <div class="countdown__minutes pt-l brdradius-s lineh-l" id="minutes">
-            <p><span class="mb-s">33</span>min</p>
-          </div>
-          <div class="countdown__seconds pt-l brdradius-s lineh-l" id="seconds">
-            <p><span class="mb-s">44</span>sec</p>
-          </div>
-        </div>
-        <button class="btn__introstart brdradius-l">
-          <a href="#">Get Started</a>
-        </button>
-      </footer>
     </div>
   </body>
 </html>

@@ -36,8 +36,6 @@ body {
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: 160% -42%, -42% 160%;
   background-size: 70% auto, 75% 80%, auto auto;
-  padding-left: 165px;
-  padding-right: 165px;
 }
 
 a {
@@ -49,7 +47,16 @@ a {
   max-width: 1440px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+  /* ok, nu nog eens slepen, rustig he! 
+  Tot het moment dat het stuk gaat */
+  /* Ok, dus nu zien we dat het tekstje wat krimpt <-- */
+  /* width: 50% en max-width: 540px, idd */
+  /* Nu zien we dat het plaatje wat er naast staat gaat wrappen */
+  /* Dus we zouden bij het plaatje hetzelfde kunnen doen */
+  /* OF! zie dat de container best veel ruimte links & rechts heeft? */
+  /* Hoe hadden we dat gedaan? */
+  /* Helemaal links en rechts, de body bedoel ik */
   align-items: center;
 }
 
@@ -58,19 +65,90 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-  padding: 80px 165px;
+  /* padding: 80px 165px; */
+  /* boven links onder rechts */
+  /* margin auto kan alleen links en rechts */
+  /* het verdeelt de overige ruimte (dus als iets niet de hele width inneemt) */
+  /* margin auto werkt niet bij elementen met display: inline of inline-block */
+  /* Dus de techniek is hier: 
+
+- width: een percentage 
+- een maxwidth (zodat het niet te groot wordt)
+- margin auto (om het gecentreerd te houden) 
+
+*/
+  /* Nu weer even slepen */
+  /* Nu hebben we helemaal geen margin meer opde container */
+  /* Dat is voor deze size misschien niet helemaal wenselijk */
+  margin: 80px auto 80px auto;
+  max-width: 1110px;
+}
+
+/* Nu komen dan de media queries haha */
+/* even slepen? */
+/* Ok, nu weer eens tukje slepen */
+/* Wanneer gat het echt "stuk"? */
+/* Ok, even naar het design kijken? */
+/* Hadden ze een tablet design? */
+/* Ok, dan mobiel? */
+/* We kunnen het plaatje nog een beetje laten krimpen */
+/* en dan opp een geven moment alles onder elkaar */
+@media only screen and (max-width: 1200px) {
+  .container {
+    /* Dus in plaats van de max width zeggen we nu */
+    /* De width is 100% - 80 voor de margins */
+    /* 80 is boven en onder */
+    /* het is 40 links en 40 rechts (dus samen 80) */
+
+    width: calc(100% - 80px);
+    margin: 80px 40px 80px 40px;
+  }
 }
 
 .logo {
   width: 100%;
+  order: -99;
+}
+
+@media only screen and (max-width: 800px) {
+  .logo {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
 }
 
 .logo-small {
   width: 155px;
 }
 
+/* Hier id de class intro text */
 .intro__text {
-  width: 540px;
+  max-width: 540px;
+  width: 45%;
+}
+
+/* en dit doet intro text op: 1200px */
+@media only screen and (min-width: 1200px) {
+  .intro__text {
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+/* even proberen? 
+
+wtf?? ok, even googlen ... waarom v*/
+/* en 800 px */
+@media only screen and (max-width: 800px) {
+  .intro__text {
+    width: 100%;
+    text-align: center;
+    order: -1;
+    margin: auto;
+    margin-top: 32px;
+  }
 }
 
 .intro__title {
@@ -83,18 +161,34 @@ a {
 }
 
 .intro__image {
-  width: 475px;
   margin-top: -50px;
-  height: 531px;
-  margin-left: 95px;
+  height: fit-content;
+  max-width: 475px;
+  width: 45%;
+  /* Nu moet het lpaatje nog bovenaan komen! */
+  /* flex-box guide? */
+  /* Is de foto een flex container of een flex item? */
+  /* Order */
+}
+
+@media only screen and (max-width: 800px) {
+  .intro__image {
+    /* Ok, nu moet het plaatje wel op 1 regel staan 
+    en de text er onder */
+    width: 100%;
+    margin: auto;
+    order: -2;
+  }
 }
 
 .subscriptions {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   text-align: center;
+  flex-wrap: wrap;
   width: 100%;
   margin-top: 184px;
+  gap: 20px;
 }
 
 .card {
@@ -126,36 +220,37 @@ a {
   font-weight: 700;
   font-size: 56px;
   color: black;
+  margin-top: -20px;
 }
 
 .cardpro__price {
   font-weight: 700;
   font-size: 56px;
   color: white;
+  margin-top: -20px;
 }
 
-.card__userbill {
+.cardpro__title {
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+}
+
+.card__users {
   font-size: 15px;
 }
 
-.btn__introstart {
+.btn__blue {
   background-color: var(--clr-neutral-blue);
   font-size: 18px;
   color: white;
   border: none;
-  width: 171px;
-  padding: 15px 10px 20px 10px;
 }
 
 .btn__start {
   font-size: 16px;
   color: black;
   border: none;
-  width: 171px;
-  text-align: center;
-  letter-spacing: normal;
-  text-transform: none;
-  padding: 20px;
 }
 
 .btn__try {
@@ -163,16 +258,12 @@ a {
   font-size: 16px;
   color: #5175ff;
   border: none;
-  width: 171px;
-  padding: 20px;
 }
 
-.btnpro__try {
+.btn__blue__try {
   background-color: white;
   font-size: 16px;
   border: none;
-  width: 171px;
-  padding: 20px;
 }
 
 li {
@@ -299,6 +390,11 @@ span {
 
 .mb-content-xl {
   margin-bottom: 184px;
+}
+
+.btn-size {
+  width: 171px;
+  padding: 20px;
 }
 
 .heading-bold--l {
