@@ -48,15 +48,6 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* ok, nu nog eens slepen, rustig he! 
-  Tot het moment dat het stuk gaat */
-  /* Ok, dus nu zien we dat het tekstje wat krimpt <-- */
-  /* width: 50% en max-width: 540px, idd */
-  /* Nu zien we dat het plaatje wat er naast staat gaat wrappen */
-  /* Dus we zouden bij het plaatje hetzelfde kunnen doen */
-  /* OF! zie dat de container best veel ruimte links & rechts heeft? */
-  /* Hoe hadden we dat gedaan? */
-  /* Helemaal links en rechts, de body bedoel ik */
   align-items: center;
 }
 
@@ -65,41 +56,12 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-  /* padding: 80px 165px; */
-  /* boven links onder rechts */
-  /* margin auto kan alleen links en rechts */
-  /* het verdeelt de overige ruimte (dus als iets niet de hele width inneemt) */
-  /* margin auto werkt niet bij elementen met display: inline of inline-block */
-  /* Dus de techniek is hier: 
-
-- width: een percentage 
-- een maxwidth (zodat het niet te groot wordt)
-- margin auto (om het gecentreerd te houden) 
-
-*/
-  /* Nu weer even slepen */
-  /* Nu hebben we helemaal geen margin meer opde container */
-  /* Dat is voor deze size misschien niet helemaal wenselijk */
   margin: 80px auto 80px auto;
   max-width: 1110px;
 }
 
-/* Nu komen dan de media queries haha */
-/* even slepen? */
-/* Ok, nu weer eens tukje slepen */
-/* Wanneer gat het echt "stuk"? */
-/* Ok, even naar het design kijken? */
-/* Hadden ze een tablet design? */
-/* Ok, dan mobiel? */
-/* We kunnen het plaatje nog een beetje laten krimpen */
-/* en dan opp een geven moment alles onder elkaar */
 @media only screen and (max-width: 1200px) {
   .container {
-    /* Dus in plaats van de max width zeggen we nu */
-    /* De width is 100% - 80 voor de margins */
-    /* 80 is boven en onder */
-    /* het is 40 links en 40 rechts (dus samen 80) */
-
     width: calc(100% - 80px);
     margin: 80px 40px 80px 40px;
   }
@@ -122,13 +84,11 @@ a {
   width: 155px;
 }
 
-/* Hier id de class intro text */
 .intro__text {
   max-width: 540px;
   width: 45%;
 }
 
-/* en dit doet intro text op: 1200px */
 @media only screen and (min-width: 1200px) {
   .intro__text {
     max-width: 600px;
@@ -137,10 +97,6 @@ a {
   }
 }
 
-/* even proberen? 
-
-wtf?? ok, even googlen ... waarom v*/
-/* en 800 px */
 @media only screen and (max-width: 800px) {
   .intro__text {
     width: 100%;
@@ -152,7 +108,7 @@ wtf?? ok, even googlen ... waarom v*/
 }
 
 .intro__title {
-  color: #333950;
+  color: var(--clr-secondary-grey);
 }
 
 .intro__subtitle {
@@ -165,16 +121,10 @@ wtf?? ok, even googlen ... waarom v*/
   height: fit-content;
   max-width: 475px;
   width: 45%;
-  /* Nu moet het lpaatje nog bovenaan komen! */
-  /* flex-box guide? */
-  /* Is de foto een flex container of een flex item? */
-  /* Order */
 }
 
 @media only screen and (max-width: 800px) {
   .intro__image {
-    /* Ok, nu moet het plaatje wel op 1 regel staan 
-    en de text er onder */
     width: 100%;
     margin: auto;
     order: -2;
@@ -197,12 +147,12 @@ wtf?? ok, even googlen ... waarom v*/
 }
 
 .card--white {
-  background-color: white;
+  background-color: var(--clr-primary-white);
 }
 
 .card--primary-with-bg {
   color: white;
-  background-color: #5175ff;
+  background-color: var(--clr-neutral-blue);
   background-image: url("./assets/home/bg-pattern-pricing.svg");
   background-position: center top;
   background-position: 50% 105%;
@@ -213,27 +163,27 @@ wtf?? ok, even googlen ... waarom v*/
 .card__title {
   font-weight: 700;
   font-size: 20px;
-  color: #333950;
+  color: var(--clr-secondary-grey);
 }
 
 .card__price {
   font-weight: 700;
   font-size: 56px;
-  color: black;
+  color: var(--clr-secondary-grey);
   margin-top: -20px;
 }
 
 .cardpro__price {
   font-weight: 700;
   font-size: 56px;
-  color: white;
+  color: var(--clr-primary-white);
   margin-top: -20px;
 }
 
 .cardpro__title {
   font-weight: 700;
   font-size: 20px;
-  color: white;
+  color: var(--clr-primary-white);
 }
 
 .card__users {
@@ -243,27 +193,31 @@ wtf?? ok, even googlen ... waarom v*/
 .btn__blue {
   background-color: var(--clr-neutral-blue);
   font-size: 18px;
-  color: white;
+  color: var(--clr-primary-white);
   border: none;
+  font-weight: bold;
 }
 
 .btn__start {
   font-size: 16px;
-  color: black;
+  color: var(--clr-primary-white);
   border: none;
+  font-weight: bold;
 }
 
 .btn__try {
-  background: #5175ff26;
   font-size: 16px;
-  color: #5175ff;
+  color: var(--clr-primary-white);
+  background-color: var(--clr-neutral-blue);
   border: none;
+  font-weight: bold;
 }
 
 .btn__blue__try {
-  background-color: white;
+  color: var(--clr-neutral-blue);
   font-size: 16px;
   border: none;
+  font-weight: bold;
 }
 
 li {
@@ -275,10 +229,15 @@ img {
   height: 100%;
 }
 
-.timertitle {
+.coming-soon {
+  display: flex;
   width: 100%;
-  font-size: 16px;
-  text-align: left;
+}
+
+.highlight {
+  color: var(--clr-neutral-blue);
+  font-size: var(--fw-semi-bold);
+  margin-left: 10px;
 }
 
 .timerdisplay {
@@ -297,41 +256,51 @@ img {
 
 .timercount {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
 .countdown__days {
-  background: #333950;
-  padding: 20px 15px 20px 15px;
-  color: white;
-  font-size: 10px;
+  background: var(--clr-secondary-grey);
+  padding: 30px 15px 30px 15px;
+  color: var(--clr-primary-white);
+  font-size: 12px;
+  text-align: center;
 }
 
 .countdown__hours {
-  background: #333950;
-  padding: 20px 10px 20px 10px;
-  color: white;
-  font-size: 10px;
+  background: var(--clr-secondary-grey);
+  padding: 30px 15px 30px 15px;
+  color: var(--clr-primary-white);
+  font-size: 12px;
+  text-align: center;
 }
 
 .countdown__minutes {
-  background: #333950;
-  padding: 20px 10px 20px 10px;
-  color: white;
-  font-size: 10px;
+  background: var(--clr-secondary-grey);
+  padding: 30px 15px 30px 15px;
+  color: var(--clr-primary-white);
+  font-size: 12px;
+  text-align: center;
 }
 
 .countdown__seconds {
-  background: #333950;
-  padding: 20px 10px 20px 10px;
-  color: white;
-  font-size: 10px;
+  background: var(--clr-secondary-grey);
+  padding: 30px 15px 30px 15px;
+  color: var(--clr-primary-white);
+  font-size: 12px;
+  text-align: center;
 }
 
-span {
+span,
+#days,
+#hours,
+#minutes,
+#seconds {
   display: flex;
   justify-content: center;
   font-size: 40px;
+  text-align: center;
 }
 
 /* Utility */
