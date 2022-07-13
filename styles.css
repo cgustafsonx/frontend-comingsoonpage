@@ -261,6 +261,8 @@ img {
 }
 
 .countdown__days {
+  display: block;
+  width: 100px;
   background: var(--clr-secondary-grey);
   padding: 30px 15px 30px 15px;
   color: var(--clr-primary-white);
@@ -269,6 +271,8 @@ img {
 }
 
 .countdown__hours {
+  display: block;
+  width: 100px;
   background: var(--clr-secondary-grey);
   padding: 30px 15px 30px 15px;
   color: var(--clr-primary-white);
@@ -277,6 +281,8 @@ img {
 }
 
 .countdown__minutes {
+  display: block;
+  width: 100px;
   background: var(--clr-secondary-grey);
   padding: 30px 15px 30px 15px;
   color: var(--clr-primary-white);
@@ -285,6 +291,8 @@ img {
 }
 
 .countdown__seconds {
+  display: block;
+  width: 100px;
   background: var(--clr-secondary-grey);
   padding: 30px 15px 30px 15px;
   color: var(--clr-primary-white);
