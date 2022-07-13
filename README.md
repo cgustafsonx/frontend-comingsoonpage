@@ -29,3 +29,6 @@ Het werken met de flexboxes biedt veel mogelijkheden om je website aan te passen
 Het toepassen van utilities en varaibelen zijn echt een life savers geweest voor mij, om zo je code schoon en overzichtelijk te houden.
 
 De volgende project zou ik van mobiel naar deskop willen uitwerken, dat is ook een goede leercurve en zal ook wat makkelijker gaan. Van groot naar klein is niet wenselijk.
+
+
+Happy coding!
