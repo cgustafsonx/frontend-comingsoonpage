@@ -2,33 +2,32 @@
 
 Netlify url: https://gleeful-brigadeiros-ac1e49.netlify.app/
 
-### | Omschrijving |###
+### | Description |###
 
-Officelite Coming Soon pagina van Frontend Mentor.
+Officelite Coming Soon @ Frontend Mentor.
 
 Frontend Mentor url: https://www.frontendmentor.io/challenges/officelite-coming-soon-site-M4DIPNz8g
 
-Een single page met subscription cards en een dynamische klok.
+A single page web with subscription cards and a dynamic clock build with Javascript.
 
-Gebruik gemaakt van de FIGMA bestanden / design en op basis daarvan een HTML opbouw gecreerd.
-Alle styleguides overgenomen en daarvan UTILITIES + VARIABELEN gemaakt die ik in de HTML en CSS heb toegepast voor
-een efficientere workflow.
+Made use of FIGMA files to build up my HTML file with classes and id's.
+You can make use of their styleguide and create UTILITIES + VARIABLES fromt it. This gives an efficient workflow to your work.
 
-Daarnaast gebruik gemaakt van het responsive met flexbox en media querries.
+Afterwards I've made it responsive with flexbox and media querries.
 
-![screenshot](./images/screenshot.jpg)
+### | My Final Solution |###
+
 ![my frontend mentor design](./images/design.png)
 
-Toolbox: HTML + CSS + JS
+Toolbox: HTML + CSS + Javascript.
 
-### | Evaluatie |
+### | Evaluation | ###
 
-Leerzame project, Je leert hoe te werken met flexbox, responsive en het toepassen van een Javascript countdown timer in de HTML.
-Het werken met de flexboxes biedt veel mogelijkheden om je website aan te passen zoals het in de FIGMA aangegeven staat.
+Learned a lot in this project. Working with flexboxes, responsive design and some Javascript to create the dynamic clock + add in the HTML & CSS.
+Working with flexboxes gives you a lot of possibilities to edit you website and or edit it like it's in the FIGMA.
 
-Het toepassen van utilities en varaibelen zijn echt een life savers geweest voor mij, om zo je code schoon en overzichtelijk te houden.
+Adding those utilities and variables are an great lifesafer to speed up my workflow and to keep my code clean!
 
-De volgende project zou ik van mobiel naar deskop willen uitwerken, dat is ook een goede leercurve en zal ook wat makkelijker gaan. Van groot naar klein is niet wenselijk.
-
+My next project will be an another one from Frontend Mentor, which I will starat in a reverse order, from mobile to desktop, so the responsive tweaks will go much easier! 
 
 Happy coding!
