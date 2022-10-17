@@ -2,7 +2,7 @@
 
 Netlify url: https://gleeful-brigadeiros-ac1e49.netlify.app/
 
-### | Description |###
+### | Description | ###
 
 Officelite Coming Soon @ Frontend Mentor.
 
@@ -15,7 +15,7 @@ You can make use of their styleguide and create UTILITIES + VARIABLES fromt it. 
 
 Afterwards I've made it responsive with flexbox and media querries.
 
-### | My Final Solution |###
+### | My Final Solution | ###
 
 ![my frontend mentor design](./images/design.png)
 
