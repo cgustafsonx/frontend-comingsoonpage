@@ -1,20 +1,17 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: "Kumbh Sans", sans-serif;
   /* border: 1px solid red; */
 }
 
 :root {
-  --clr-primary-white: #ffff;
+  --clr-primary-white: #ffffff;
   --clr-secondary-grey: #333950;
   --clr-neutral-blue: #5175ff;
 
   --ff-primary: "Kumbh Sans", sans-serif;
-
-  --ff-body: var(--ff-primary);
-  --ff-heading: var(--ff-primary);
 
   --fw-regular: 400;
   --fw-semi-bold: 500;
@@ -33,7 +30,7 @@ body {
   background-image: url(./assets/home/bg-pattern-header.svg),
     url(./assets/home/bg-pattern-footer.svg),
     linear-gradient(180deg, #fafafa 61%, #25293a 0%);
-  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-repeat: no-repeat;
   background-position: 160% -42%, -42% 160%;
   background-size: 70% auto, 75% 80%, auto auto;
 }
@@ -56,14 +53,14 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-  margin: 80px auto 80px auto;
+  margin: 80px auto;
   max-width: 1110px;
 }
 
 @media only screen and (max-width: 1200px) {
   .container {
     width: calc(100% - 80px);
-    margin: 80px 40px 80px 40px;
+    margin: 80px 40px;
   }
 }
 
@@ -112,8 +109,8 @@ a {
 }
 
 .intro__subtitle {
-  font-weight: 400;
-  font-size: 16px;
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-regular-s);
 }
 
 .intro__image {
@@ -151,73 +148,45 @@ a {
 }
 
 .card--primary-with-bg {
-  color: white;
+  color: var(--clr-primary-white);
   background-color: var(--clr-neutral-blue);
   background-image: url("./assets/home/bg-pattern-pricing.svg");
-  background-position: center top;
   background-position: 50% 105%;
   background-repeat: no-repeat;
   background-size: 250% auto;
 }
 
-.card__title {
-  font-weight: 700;
-  font-size: 20px;
-  color: var(--clr-secondary-grey);
-}
-
-.card__price {
-  font-weight: 700;
-  font-size: 56px;
-  color: var(--clr-secondary-grey);
-  margin-top: -20px;
-}
-
-.cardpro__price {
-  font-weight: 700;
-  font-size: 56px;
-  color: var(--clr-primary-white);
-  margin-top: -20px;
-}
-
+.card__title,
 .cardpro__title {
-  font-weight: 700;
-  font-size: 20px;
-  color: var(--clr-primary-white);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-bold-s);
+}
+
+.card__price,
+.cardpro__price {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-bold-m);
+  margin-top: -20px;
 }
 
 .card__users {
   font-size: 15px;
 }
 
-.btn__blue {
-  background-color: var(--clr-neutral-blue);
-  font-size: 18px;
-  color: var(--clr-primary-white);
-  border: none;
-  font-weight: bold;
-}
-
-.btn__start {
-  font-size: 16px;
-  color: var(--clr-primary-white);
-  border: none;
-  font-weight: bold;
-}
-
+.btn__blue,
 .btn__try {
-  font-size: 16px;
-  color: var(--clr-primary-white);
   background-color: var(--clr-neutral-blue);
+  font-size: var(--fs-regular-m);
+  color: var(--clr-primary-white);
   border: none;
-  font-weight: bold;
+  font-weight: var(--fw-bold);
 }
 
 .btn__blue__try {
   color: var(--clr-neutral-blue);
-  font-size: 16px;
+  font-size: var(--fs-regular-m);
   border: none;
-  font-weight: bold;
+  font-weight: var(--fw-bold);
 }
 
 li {
@@ -245,7 +214,7 @@ img {
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   font-size: 16px;
   line-height: 48px;
   letter-spacing: 5px;
@@ -260,44 +229,18 @@ img {
   gap: 20px;
 }
 
-.countdown__days {
-  display: block;
-  width: 100px;
-  background: var(--clr-secondary-grey);
-  padding: 30px 15px 30px 15px;
-  color: var(--clr-primary-white);
-  font-size: 12px;
-  text-align: center;
-}
-
-.countdown__hours {
-  display: block;
-  width: 100px;
-  background: var(--clr-secondary-grey);
-  padding: 30px 15px 30px 15px;
-  color: var(--clr-primary-white);
-  font-size: 12px;
-  text-align: center;
-}
-
-.countdown__minutes {
-  display: block;
-  width: 100px;
-  background: var(--clr-secondary-grey);
-  padding: 30px 15px 30px 15px;
-  color: var(--clr-primary-white);
-  font-size: 12px;
-  text-align: center;
-}
-
+.countdown__days,
+.countdown__hours,
+.countdown__minutes,
 .countdown__seconds {
   display: block;
   width: 100px;
   background: var(--clr-secondary-grey);
-  padding: 30px 15px 30px 15px;
+  padding: 30px 15px;
   color: var(--clr-primary-white);
   font-size: 12px;
   text-align: center;
+  border-radius: var(--brdradius-s);
 }
 
 span,
